@@ -2,8 +2,7 @@ Proyecto Frontend Angular – Agencia de Viajes
 Entregas Semana 5 y Semana 7
 Descripción General
 
-
-                 LINK DE LA APP
+LINK DE LA APP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 https://staging.d3rtla1ym3ow7b.amplifyapp.com/contact
 
