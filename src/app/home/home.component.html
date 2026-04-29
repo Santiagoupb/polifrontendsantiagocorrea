@@ -1,0 +1,134 @@
+<section class="hero container">
+  <div class="hero-copy">
+    <span class="eyebrow">Agencia de viajes academica</span>
+    <h1>Tu proxima experiencia comienza con un buen plan.</h1>
+    <p>
+      Organizamos salidas, paquetes y experiencias con enfoque estudiantil,
+      institucional y turistico para que viajes con confianza.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" routerLink="/contact">Contactanos</a>
+      <a class="btn btn-secondary" href="#services">Ver servicios</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="image-placeholder image-placeholder-hero">
+      <img
+        src="https://skift.com/wp-content/uploads/2024/03/Boeing_327634_AAL_73710_InFlight_1356046218_1023-scaled.jpg"
+        alt="Imagen principal del servicio"
+      />
+    </div>
+  </div>
+</section>
+
+<section id="about" class="benefits container">
+  <div class="benefits-media">
+    <div class="illustration-card">
+      <div class="image-placeholder image-placeholder-benefit">
+        <img
+          src="https://www.vinccihoteles.com/media/uploads/cms_apps/imagenes/disposicion-articulos-viaje-angulo-alto.jpg?q=pr:sharp/rs:fill/w:900/h:500/g:ce/f:jpg"
+          alt="Imagen de beneficios"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="benefits-copy">
+    <h2>Seccion de beneficios</h2>
+    <p>
+      Diseñamos experiencias claras, seguras y flexibles para estudiantes,
+      docentes y viajeros que buscan soluciones completas en un solo lugar.
+    </p>
+    <ul class="benefit-list">
+      <li>Asesoria personalizada</li>
+      <li>Opciones segun presupuesto</li>
+      <li>Atencion rapida</li>
+      <li>Reserva sencilla</li>
+      <li>Soporte continuo</li>
+    </ul>
+    <a class="btn btn-primary" routerLink="/contact">Contacto</a>
+  </div>
+</section>
+
+<section class="highlights container">
+  <h2>Seccion de llamados a la accion</h2>
+  <div class="highlight-grid">
+    <article class="highlight-card">
+      <div class="icon-circle">01</div>
+      <h3>Planea tu viaje</h3>
+      <p>Encuentra opciones academicas, recreativas y corporativas en minutos.</p>
+    </article>
+    <article class="highlight-card">
+      <div class="icon-circle">02</div>
+      <h3>Guarda favoritos</h3>
+      <p>Marca los servicios que mas te interesan para revisarlos despues.</p>
+    </article>
+    <article class="highlight-card">
+      <div class="icon-circle">03</div>
+      <h3>Solicita asesoria</h3>
+      <p>Envianos tu mensaje y recibe orientacion segun tu necesidad.</p>
+    </article>
+  </div>
+</section>
+
+<section id="services" class="services-section container">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">Servicios</span>
+      <h2>Catalogo</h2>
+    </div>
+    <div class="favorites-summary">
+      Favoritos: <strong>{{ favoritesCount }}</strong>
+    </div>
+  </div>
+
+  <label class="search-box">
+    <span class="sr-only">Buscar servicio</span>
+    <input type="search" placeholder="Buscar servicio" [(ngModel)]="searchQuery" (ngModelChange)="onSearchChange($event)" />
+  </label>
+
+  <div id="services-status" class="services-status" role="status" aria-live="polite">
+    {{ status() }}
+  </div>
+
+  <div id="services-grid" class="services-grid" [@listAnimation]>
+    <div *ngIf="!filteredServices().length" class="empty-state">
+      No encontramos servicios con ese criterio de busqueda.
+    </div>
+
+    <article *ngFor="let service of filteredServices()" class="service-card" [@fadeIn]>
+      <div class="service-card-header">
+        <div>
+          <h3>{{ service.name }}</h3>
+          <span class="service-tag">{{ service.category }}</span>
+        </div>
+        <button
+          class="favorite-button"
+          [class.is-favorite]="favorites().includes(service.id)"
+          type="button"
+          (click)="toggleFavorite(service.id)"
+          [attr.aria-label]="favorites().includes(service.id) ? 'Quitar de favoritos' : 'Agregar a favoritos'"
+          [attr.aria-pressed]="favorites().includes(service.id)"
+        >
+          {{ favorites().includes(service.id) ? '★' : '☆' }}
+        </button>
+      </div>
+      <p>{{ service.description }}</p>
+      <div class="service-meta">
+        <span class="service-price">{{ service.price }}</span>
+        <a class="btn btn-outline" routerLink="/contact">Solicitar</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="packages" class="logos container" aria-label="Aliados">
+  <div class="logo-pill">
+    <img src="https://cdn-icons-png.flaticon.com/128/4138/4138124.png" alt="Logo aliado 3" />
+  </div>
+  <div class="logo-pill">
+    <img src="https://cdn-icons-png.flaticon.com/128/2168/2168281.png" alt="Logo aliado 4" />
+  </div>
+  <div class="logo-pill">
+    <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="Logo aliado 5" />
+  </div>
+</section>

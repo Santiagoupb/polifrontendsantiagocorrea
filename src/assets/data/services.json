@@ -1,0 +1,44 @@
+[
+  {
+    "id": "srv-001",
+    "name": "Paquete Cartagena Academica",
+    "category": "Paquetes",
+    "description": "Incluye transporte, hospedaje, actividades guiadas y acompanamiento para grupos estudiantiles.",
+    "price": "$1.250.000 COP"
+  },
+  {
+    "id": "srv-002",
+    "name": "Reserva de vuelos",
+    "category": "Transporte",
+    "description": "Gestion y comparacion de vuelos nacionales e internacionales con asesor personalizado.",
+    "price": "$320.000 COP"
+  },
+  {
+    "id": "srv-003",
+    "name": "Seguro de viaje",
+    "category": "Asistencia",
+    "description": "Cobertura para emergencias medicas, retrasos y proteccion general durante el trayecto.",
+    "price": "$95.000 COP"
+  },
+  {
+    "id": "srv-004",
+    "name": "Salidas institucionales",
+    "category": "Eventos",
+    "description": "Organizacion integral de viajes empresariales, academicos y actividades de integracion.",
+    "price": "$890.000 COP"
+  },
+  {
+    "id": "srv-005",
+    "name": "Tours personalizados",
+    "category": "Experiencias",
+    "description": "Itinerarios flexibles adaptados al tiempo, presupuesto e intereses del viajero.",
+    "price": "$540.000 COP"
+  },
+  {
+    "id": "srv-006",
+    "name": "Hospedaje aliado",
+    "category": "Alojamiento",
+    "description": "Opciones de hotel y alojamiento con convenios, ubicacion estrategica y tarifas especiales.",
+    "price": "$410.000 COP"
+  }
+]
