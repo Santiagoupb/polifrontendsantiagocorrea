@@ -2,6 +2,13 @@ Proyecto Frontend Angular – Agencia de Viajes
 Entregas Semana 5 y Semana 7
 Descripción General
 
+
+                 LINK DE LA APP
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+https://staging.d3rtla1ym3ow7b.amplifyapp.com/contact
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Este proyecto consiste en el desarrollo de una aplicación web para una agencia de viajes especializada en servicios académicos, institucionales y turísticos. La solución fue diseñada con el objetivo de digitalizar la oferta de servicios, mejorar la experiencia del usuario y facilitar la gestión de solicitudes en línea.
 
 La aplicación fue desarrollada utilizando Angular como framework principal y se encuentra desplegada en la nube mediante AWS Amplify, permitiendo acceso en producción con alta disponibilidad y escalabilidad.
